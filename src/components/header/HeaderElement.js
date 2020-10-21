@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import {MdArrowBack,MdKeyboardArrowDown} from "react-icons/md"
 
+export const HeaderContainer = styled.div`
+    position: sticky;
+    top: 0;
+    background: #fff;
+`
 export const AddressContainer = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -47,6 +52,8 @@ export const DateButton = styled.button`
     display: flex;
     background: #fff;
     flex-direction: column;
+    margin: 0 8px;
+    color: '#424749';
 
     &:focus{
         background: #424749;

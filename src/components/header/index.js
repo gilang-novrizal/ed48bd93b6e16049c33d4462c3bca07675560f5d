@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+    HeaderContainer,
     AddressContainer,
     ArrowDown,
     ArrowLeft,
@@ -85,7 +86,7 @@ const Header = () => {
         })
     }
     return (
-        <>
+        <HeaderContainer>
             <AddressContainer>
                 <ArrowLeft/>
                 <AddressWrapper>
@@ -100,7 +101,7 @@ const Header = () => {
                 {renderButton()}
             </DateContainer>
 
-        </>
+        </HeaderContainer>
     )
 }
 
