@@ -16,7 +16,8 @@ import {
     ContentSub,
     BtnAdd,
     AddIcon,
-    Dot
+    Dot,
+    ImageCont
 } from './BodyElement'
 
 import {addToCart} from "../../action"
@@ -37,7 +38,9 @@ const Body = ({showBody}) => {
         return product.map((item,index)=>{
             return(
                 <Card key={index}>
-                    <CardImage src={item.image}/>
+                    <ImageCont>
+                        <CardImage src={item.image}/>
+                    </ImageCont>
                     <CardContent>
                         <RatingWrapper>
                             <RatingText>{item.rating}</RatingText>

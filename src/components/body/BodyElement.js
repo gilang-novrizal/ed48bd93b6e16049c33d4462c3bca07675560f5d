@@ -26,9 +26,18 @@ export const Card = styled.div`
     overflow: hidden;
    
 `
+export const ImageCont = styled.div`
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover
+`
 export const CardImage = styled.img`
     width: 100%;
-   
+    height: 100%;
 `
 export const CardContent = styled.div`
     display: flex;
