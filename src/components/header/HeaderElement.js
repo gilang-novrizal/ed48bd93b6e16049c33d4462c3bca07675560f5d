@@ -48,7 +48,7 @@ export const ArrowDown = styled(MdKeyboardArrowDown)`
 export const DateContainer = styled.div`
     display: flex;
     overflow-y: scroll;
-    border-bottom: 2px solid #f1f1f2;
+    border-bottom: 1px solid #f1f1f2;
 `
 export const DateButton = styled.button`
     padding: 12px;

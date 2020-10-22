@@ -9,7 +9,6 @@ export const CartContainer = styled.div`
     z-index: 10;
     padding: 16px;
     display: ${({show})=>(show? "block" : "none")};
-    transition: all 1s ease-in-out;
 `
 
 export const CartWrapper = styled.div`

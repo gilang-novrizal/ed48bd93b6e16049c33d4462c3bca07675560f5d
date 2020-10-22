@@ -2,9 +2,6 @@ import React from 'react'
 import {useDispatch, useSelector} from "react-redux"
 import {
     BodyContainer, 
-    BtnContainer, 
-    BtnDinner, 
-    BtnLunch,
     Card,
     CardImage,
     DateText,
@@ -25,7 +22,7 @@ import {
 import {addToCart} from "../../action"
 
 const Body = ({showBody}) => {
-    const [selected, setSelected] = React.useState(false)
+   
 
     const dispatch = useDispatch()
     const {product,cart,total} = useSelector((state)=>{
@@ -82,10 +79,7 @@ const Body = ({showBody}) => {
     // console.log("globalstore : ", product, cart, total)
     return (
      <BodyContainer show={showBody? true : false}>
-         <BtnContainer>
-             <BtnLunch active={selected} onClick={()=> setSelected(!selected)}>Lunch</BtnLunch>
-             <BtnDinner active={!selected} onClick={()=> setSelected(!selected)}>Dinner</BtnDinner>
-         </BtnContainer>
+         
          
          <DateText>Rabu, 20 Oktober 2020</DateText>
          {renderCard()}

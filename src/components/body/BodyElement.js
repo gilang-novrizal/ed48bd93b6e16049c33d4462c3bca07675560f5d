@@ -7,35 +7,7 @@ export const BodyContainer = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 16px;
-    overflow-y: scroll;
     z-index: 1;
-`
-export const BtnContainer = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-`
-
-export const BtnLunch = styled.button`
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 8px;
-    background: ${({active})=> (active? '#424749' : "#fff" )};;
-    color: ${({active})=>(active? "#fff" : "#6e7679")};;
-    border-radius: 4px 0 0 4px;
-    border: 1px solid #6e7679;
-    
-`
-export const BtnDinner = styled.button`
-    border: none;
-    outline: none;
-    padding: 8px;
-    width: 100%;
-    background: ${({active})=> (active? '#424749' : "#fff" )};
-    color: ${({active})=>(active? "#fff" : "#6e7679")};
-    border-radius: 0 4px  4px 0;
-    border: 1px solid #6e7679;
 `
 
 export const DateText = styled.p`
@@ -72,6 +44,7 @@ export const RatingText = styled.p`
     font-size: 12px;
     color: #6e7679;
     margin-right: 8px;
+    font-weight: 700;
 `
 
 export const StarWrapper = styled.div`
