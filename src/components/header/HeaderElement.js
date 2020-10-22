@@ -5,15 +5,17 @@ export const HeaderContainer = styled.div`
     position: sticky;
     top: 0;
     background: #fff;
+    z-index: 1;
 `
 export const AddressContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 8px;
 `
 
 export const ArrowLeft = styled(MdArrowBack)`
-    font-size: 16px;
+    font-size: 20px;
     margin: 8px;
     margin-right: 0;
 `
@@ -36,14 +38,17 @@ export const AddressText = styled.p`
     font-size: 14px;
     font-weight: 700;
     color: #424749;
+    display: flex;
+    align-items: center;
 `
 export const ArrowDown = styled(MdKeyboardArrowDown)`
     color: #f9423a;
+    font-size: 20px;
 `
 export const DateContainer = styled.div`
     display: flex;
     overflow-y: scroll;
-    border-bottom: 0.1px solid #f1f1f2;
+    border-bottom: 2px solid #f1f1f2;
 `
 export const DateButton = styled.button`
     padding: 12px;

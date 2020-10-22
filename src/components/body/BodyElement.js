@@ -2,12 +2,13 @@ import styled from "styled-components"
 import {MdStar, MdStarHalf, MdAdd, MdFiberManualRecord} from "react-icons/md"
 
 export const BodyContainer = styled.div`
-    display: flex;
+    display: ${({show})=>(show? 'flex' : 'none')};
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 16px;
     overflow-y: scroll;
+    z-index: 1;
 `
 export const BtnContainer = styled.div`
     display: flex;
@@ -65,6 +66,7 @@ export const CardContent = styled.div`
 
 export const RatingWrapper = styled.div`
     display: flex;
+    align-items: center;
 `
 export const RatingText = styled.p`
     font-size: 12px;

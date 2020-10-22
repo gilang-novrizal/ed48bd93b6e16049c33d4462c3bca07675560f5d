@@ -14,7 +14,7 @@ import {
     BtnText2
 } from "./HeaderElement"
 
-const Header = () => {
+const Header = ({onClick}) => {
     const dateArr = [
         {
             date: 11,
@@ -93,7 +93,7 @@ const Header = () => {
                     <AddressTitle>Alamat Pengantaran</AddressTitle>
                     <AddressTextWrapper>
                         <AddressText>Tokopedia Tower</AddressText>
-                        <ArrowDown/>
+                        <ArrowDown onClick={onClick}/>
                     </AddressTextWrapper>
                 </AddressWrapper>
             </AddressContainer>

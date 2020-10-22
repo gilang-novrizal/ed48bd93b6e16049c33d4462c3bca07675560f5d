@@ -21,24 +21,25 @@ import {
     AddIcon,
     Dot
 } from './BodyElement'
-import {MdFiberManualRecord} from "react-icons/md"
 
 import {addToCart} from "../../action"
 
-const Body = () => {
+const Body = ({showBody}) => {
     const [selected, setSelected] = React.useState(false)
 
-    const {product,cart} = useSelector((state)=>{
+    const dispatch = useDispatch()
+    const {product,cart,total} = useSelector((state)=>{
         return{
             product: state.productReducers.product,
-            cart: state.cartReducers.cart
+            cart: state.cartReducers.cart,
+            total: state.cartReducers.total
         }
     })
 
     const renderCard = ()=>{
         return product.map((item,index)=>{
             return(
-                <Card>
+                <Card key={index}>
                     <CardImage src={item.image}/>
                     <CardContent>
                         <RatingWrapper>
@@ -55,7 +56,7 @@ const Body = () => {
                         <ContentSub>by {item.resto} <Dot/> {item.location}</ContentSub>
                         <BottomWrapper>
                             <ContentName>Rp {item.price.toLocaleString()}</ContentName>
-                            <BtnAdd>ADD<AddIcon/></BtnAdd>
+                            <BtnAdd onClick={()=> handleCart(item)}>ADD<AddIcon/></BtnAdd>
                         </BottomWrapper>
                     </CardContent>
                 </Card>
@@ -63,9 +64,24 @@ const Body = () => {
         })
     }
 
-    console.log("globalstore : ", product, cart)
+    const handleCart = (item) =>{
+        let body = {
+            name: item.name,
+        }
+        let tempCart = [...cart]
+        let totalCart = total + item.price
+
+        tempCart.push(body)
+        let data = {
+            body: tempCart,
+            total: totalCart
+        }
+        dispatch(addToCart(data))
+        
+    }
+    // console.log("globalstore : ", product, cart, total)
     return (
-     <BodyContainer>
+     <BodyContainer show={showBody? true : false}>
          <BtnContainer>
              <BtnLunch active={selected} onClick={()=> setSelected(!selected)}>Lunch</BtnLunch>
              <BtnDinner active={!selected} onClick={()=> setSelected(!selected)}>Dinner</BtnDinner>
