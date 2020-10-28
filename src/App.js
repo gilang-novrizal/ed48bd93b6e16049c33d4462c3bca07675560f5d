@@ -15,7 +15,7 @@ function App() {
       <ButtonCont/>
       <Body showBody={!showModal}/>
       <Cart/>
-    </div>
+    </div> 
   );
 }
 
